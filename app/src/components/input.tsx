@@ -285,7 +285,8 @@ export default function MessageInput(props: MessageInputProps) {
                 onChange={onChange}
                 rightSection={rightSection}
                 rightSectionWidth={context.generating ? 100 : 55}
-                onKeyDown={hotkeyHandler} />
+                onKeyDown={hotkeyHandler}
+                autoFocus />
             <QuickSettings key={tab} />
         </div>
     </Container>;
