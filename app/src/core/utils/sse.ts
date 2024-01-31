@@ -28,7 +28,6 @@ export default class SSE {
     private xhr: any = null;
     private readyState = this.INITIALIZING;
     private progress = 0;
-    private chunk = '';
 
     public constructor(public url: string, public options: any) { }
 
@@ -90,12 +89,8 @@ export default class SSE {
         const data = this.xhr.responseText.substring(this.progress);
         this.progress += data.length;
         data.split(/(\r\n|\r|\n){2}/g).forEach((part: string) => {
-            if (part.trim().length === 0) {
-                this.dispatchEvent(this.parseEventChunk(this.chunk.trim()));
-                this.chunk = '';
-            } else {
-                this.chunk += part;
-            }
+            if (part.trim().length === 0) return;
+            this.dispatchEvent(this.parseEventChunk(part.trim()));
         });
     };
 
@@ -141,10 +136,6 @@ export default class SSE {
      */
     private onStreamLoaded = (e: any) => {
         this.onStreamProgress(e);
-
-        // Parse the last chunk.
-        this.dispatchEvent(this.parseEventChunk(this.chunk));
-        this.chunk = '';
     };
 
     /**
