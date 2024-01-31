@@ -37,16 +37,36 @@ export const parameterOptions: OptionGroup = {
                         value: "gpt-3.5-turbo-16k",
                     },
                     {
+                        label: "GPT 3.5 Turbo Snapshot (June 13, 2023)",
+                        value: "gpt-3.5-turbo-0613",
+                    },
+                    {
+                        label: "GPT-3.5 Turbo Snapshot (January 25, 2024)",
+                        value: "gpt-3.5-turbo-0125",
+                    },
+                    {
+                        label: "GPT 3.5 Turbo 16k Snapshot (June 13, 2023)",
+                        value: "gpt-3.5-turbo-16k-0613",
+                    },
+                    {
                         label: "GPT 4",
                         value: "gpt-4",
                     },
                     {
                         label: "GPT-4 Turbo",
-                        value: "gpt-4-1106-preview",
+                        value: "gpt-4-turbo-preview",
                     },
                     {
                         label: "GPT-4 Turbo with vision",
                         value: "gpt-4-vision-preview",
+                    },
+                    {
+                        label: "GPT-4 Turbo Snapshot (November 6, 2023)",
+                        value: "gpt-4-1106-preview",
+                    },
+                    {
+                        label: "GPT-4 Turbo Snapshot (January 25th, 2024)",
+                        value: "gpt-4-0125-preview",
                     },
                     {
                         label: "GPT 4 32k (requires invite)",
@@ -56,19 +76,9 @@ export const parameterOptions: OptionGroup = {
                         label: "GPT 4 Snapshot (June 13, 2023)",
                         value: "gpt-4-0613",
                     },
-          
                     {
                         label: "GPT 4 32k Snapshot (June 13, 2023)",
                         value: "gpt-4-32k-0613",
-                    },
-  
-                    {
-                        label: "GPT 3.5 Turbo Snapshot (June 13, 2023)",
-                        value: "gpt-3.5-turbo-0613",
-                    },
-                    {
-                        label: "GPT 3.5 Turbo 16k Snapshot (June 13, 2023)",
-                        value: "gpt-3.5-turbo-16k-0613",
                     },
                 ],
             }),
